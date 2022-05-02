@@ -1,8 +1,9 @@
-import React from 'react';
+
 import { useForm } from "react-hook-form";
 
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
+    
     const onSubmit = data => {
         const url = `http://localhost:5000/toy/`;
         fetch(url, {
@@ -24,6 +25,7 @@ const AddItem = () => {
         <div className='w-50 mx-auto'>
             <h3>Add Item</h3>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                
                 <input className='mb-2' placeholder= 'Item name' {...register('name')}  />
                 <textarea className='mb-2' placeholder= 'Item Details' type="text" {...register('details')}  />
                 <input className='mb-2' placeholder= 'Price' type="number" {...register('price')} />

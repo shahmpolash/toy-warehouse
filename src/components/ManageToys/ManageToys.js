@@ -16,8 +16,6 @@ const ManageToys = () => {
                 const remaining = toys.filter(toy => toy._id !== id);
                 setToys(remaining);
             })
-                
-
         }
     }
     return (

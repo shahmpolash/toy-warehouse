@@ -10,6 +10,7 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import AddItem from './components/AddItem';
 import AllItems from './components/AllItems/AllItems';
 import ManageToys from './components/ManageToys/ManageToys';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -29,9 +30,8 @@ function App() {
         <Route path='/manage-toys' element={<RequireAuth>
           <ManageToys></ManageToys>
         </RequireAuth>}></Route>
-
-
       </Routes>
+      <Footer></Footer>
      
     </div>
   );

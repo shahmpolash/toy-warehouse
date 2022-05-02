@@ -7,4 +7,10 @@ img{
 }
 .toy-items{
  border: 5px dotted red;
+ margin-bottom: 15px;
+}
+
+.toy-items:hover{
+    transform: scale(1.1);
+    background-color: yellow;
 }
