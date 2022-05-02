@@ -1,23 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Header from './components/Header/Header';
+import ToyDetails from './components/ToyDetails/ToyDetails';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import AddItem from './components/AddItem';
+import AllItems from './components/AllItems/AllItems';
+import ManageToys from './components/ManageToys/ManageToys';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='whole-body'>
+      <Header></Header>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/all-items' element={<AllItems></AllItems>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/toydetails/:toydetailId' element={<RequireAuth>
+          <ToyDetails></ToyDetails>
+        </RequireAuth>}></Route>
+        <Route path='/additem' element={<RequireAuth>
+          <AddItem></AddItem>
+        </RequireAuth>}></Route>
+        <Route path='/manage-toys' element={<RequireAuth>
+          <ManageToys></ManageToys>
+        </RequireAuth>}></Route>
+
+
+      </Routes>
+     
     </div>
   );
 }
