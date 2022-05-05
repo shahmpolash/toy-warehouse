@@ -46,17 +46,17 @@ const UpdateItem = () => {
             <h3>Update This Toy {toy.name}</h3>
             
             <form onSubmit={handleUpdateItem} >
-                <input className='w-100' type="text" name="name"   placeholder='Item Name' required />
+                <input className='w-100' defaultValue={toy.name}  type="text" name="name"   placeholder='Item Name' required />
                 <br />
-                <input className='w-100' type="textarea" name="details" placeholder='Item Details' required />
+                <input className='w-100' defaultValue={toy.details} type="textarea" name="details" placeholder='Item Details' required />
                 <br />
-                <input className='w-100' type="number" name="price" placeholder='Item Price' required />
+                <input className='w-100' defaultValue={toy.price} type="number" name="price" placeholder='Item Price' required />
                 <br />
-                <input className='w-100' type="number" name="quantity" placeholder='Item Quantity' required />
+                <input className='w-100' defaultValue={toy.quantity} type="number" name="quantity" placeholder='Item Quantity' required />
                 <br />
-                <input className='w-100' type="text" name="seller" placeholder='Seller Name' required />
+                <input className='w-100' defaultValue={toy.seller}  type="text" name="seller" placeholder='Seller Name' required />
                 <br />
-                <input className='w-100' type="text" name="img" placeholder='Img URL' required />
+                <input className='w-100' defaultValue={toy.img}  type="text" name="img" placeholder='Img URL' required />
                 <br />
                 <br />
                 <input className='w-100' type="submit" value="Update" />

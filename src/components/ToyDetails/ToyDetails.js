@@ -27,7 +27,10 @@ const ToyDetails = () => {
             <h4>Price: ${toy.price}</h4>
             <h4>Quantity: {toy.quantity}</h4>
             <p className='p-5'>{toy.details}</p>
-            <button>Deliver Now</button>
+            <Button>Deliver Now</Button>
+            <br />
+            or
+            <br />
             <Button onClick={() => handleUpdate(_id)} >Update Now</Button>
             
         </div>
