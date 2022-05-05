@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
 import './ToyDetails.css';
 
 const ToyDetails = () => {
@@ -10,7 +11,13 @@ const ToyDetails = () => {
         fetch(url)
         .then(res=>res.json())
         .then(data=>setToy(data));
-    },[])
+    },[]);
+    const {_id, name, price, seller, details, quantity, img } = toy;
+    const navigate =  useNavigate()
+    const handleUpdate = id =>{
+        navigate(`/updateitem/${id}`);
+
+    }
     
 
     return (
@@ -21,6 +28,7 @@ const ToyDetails = () => {
             <h4>Quantity: {toy.quantity}</h4>
             <p className='p-5'>{toy.details}</p>
             <button>Deliver Now</button>
+            <Button onClick={() => handleUpdate(_id)} >Update Now</Button>
             
         </div>
     );

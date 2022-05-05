@@ -11,6 +11,7 @@ import AddItem from './components/AddItem';
 import AllItems from './components/AllItems/AllItems';
 import ManageToys from './components/ManageToys/ManageToys';
 import Footer from './components/Footer/Footer';
+import UpdateItem from './components/UpdateItem/UpdateItem';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/toydetails/:toydetailId' element={<RequireAuth>
           <ToyDetails></ToyDetails>
         </RequireAuth>}></Route>
+        <Route path='/updateitem/:id' element={<UpdateItem></UpdateItem>}></Route>
         <Route path='/additem' element={<RequireAuth>
           <AddItem></AddItem>
         </RequireAuth>}></Route>

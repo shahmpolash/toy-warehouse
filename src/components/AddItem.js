@@ -15,6 +15,8 @@ const AddItem = () => {
         })
         .then(res=>res.json())
         .then(result=>{
+            alert('Item is Added Successfully');
+            
 
         } )
 
@@ -29,7 +31,7 @@ const AddItem = () => {
                 <input className='mb-2' placeholder= 'Item name' {...register('name')}  />
                 <textarea className='mb-2' placeholder= 'Item Details' type="text" {...register('details')}  />
                 <input className='mb-2' placeholder= 'Price' type="number" {...register('price')} />
-                <input className='mb-2' placeholder= 'Quentity' type="number" {...register('quentity')}  />
+                <input className='mb-2' placeholder= 'Quantity' type="number" {...register('quantity')}  />
                 <input className='mb-2' placeholder= 'Seller' type="text" {...register('seller')}  />
                 <input className='mb-2' placeholder= 'Image URL' type="text" {...register('img')}  />
                 <input type="submit" value="Add Item" />

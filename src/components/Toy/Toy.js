@@ -18,7 +18,7 @@ const Toy = ({toy}) => {
             <h4>Price: ${price}</h4>
             <h5>Available Quantity: {quantity}</h5>
             <p className='p-2'>Details: {details.slice(0,70)}</p>
-            <Button onClick={() => handleToyDetails(_id)} className='update-button'>Update</Button>
+            <Button onClick={() => handleToyDetails(_id)} className='update-button'>Details</Button>
 
         </div>
     );
