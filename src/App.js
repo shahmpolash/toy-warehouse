@@ -13,6 +13,7 @@ import ManageToys from './components/ManageToys/ManageToys';
 import Footer from './components/Footer/Footer';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import NotFound from './components/NotFound/NotFound';
+import Blog from './components/Blog';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <ManageToys></ManageToys>
         </RequireAuth>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         
       </Routes>
       <Footer></Footer>
