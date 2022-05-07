@@ -2,6 +2,7 @@
 ## whatever I have done ##
 - Homepage Responsive Design
 - Fake api Used
+- backend/Server Setup
 - Firebase Installed
 - Privet Route Setup
 - Login Form and Signup Form Configure
