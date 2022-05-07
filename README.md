@@ -9,4 +9,6 @@
 - Google Signin Option Setup
 - Firebase Hook
 - MongoDB Installed
+- Error Message Setup
+- Blog Page setup
 - And More
