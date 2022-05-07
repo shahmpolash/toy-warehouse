@@ -26,12 +26,20 @@ const ToyDetails = () => {
             <img src={toy.img} alt="" />
             <h4>Price: ${toy.price}</h4>
             <h4>Quantity: {toy.quantity}</h4>
-            <p className='p-5'>{toy.details}</p>
+            <h3 className='p-5'>{toy.details}</h3>
             <Button>Deliver Now</Button>
             <br />
             or
             <br />
-            <Button onClick={() => handleUpdate(_id)} >Update Now</Button>
+            
+            <form>
+                <input type="number" name="" id="" />
+                <br />
+                <input className='bg-primary text-white' type="submit" value="Add Quantity" />
+            </form>
+            or
+            <br />
+            <Button onClick={() => handleUpdate(_id)} >Update Item Now</Button>
             
         </div>
     );

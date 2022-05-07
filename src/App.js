@@ -13,6 +13,7 @@ import ManageToys from './components/ManageToys/ManageToys';
 import Footer from './components/Footer/Footer';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 
+
 function App() {
   return (
     <div className='whole-body'>
@@ -32,6 +33,7 @@ function App() {
         <Route path='/manage-toys' element={<RequireAuth>
           <ManageToys></ManageToys>
         </RequireAuth>}></Route>
+        
       </Routes>
       <Footer></Footer>
      
