@@ -55,7 +55,6 @@ const ToyDetails = () => {
         .then(result=>setToy(resultData));
         
     }
-    
 
     return (
         <div className='text-center toy-img'>

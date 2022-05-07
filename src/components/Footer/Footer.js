@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
+    const today = new Date();
+    const year = today.getFullYear();
     return (
         <div className='footer mx-auto'>
             <div className='footer-part container w-50 mx-auto'>
@@ -22,7 +24,9 @@ const Footer = () => {
                     <li><a href="#">Manage Items</a></li>
                 </ul>
             </div>
+            
             </div>
+            <p className='container'>{year} © Copyright by ToyHouse</p>
         </div>
     );
 };
